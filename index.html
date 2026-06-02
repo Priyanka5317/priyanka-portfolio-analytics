@@ -164,12 +164,12 @@ const timeline = [
   { date:'Aug 2019 - Aug 2023', title:'B.E. Computer Electronics & Telecommunication', org:'Savitribai Phule Pune University · India', desc:'India patent (2023) for a chronic-disease diagnostic system.' },
 ];
 const projects = [
-  { title:'E-Commerce Reporting Warehouse', tags:['Power BI','MySQL','DAX','ETL'], solution:'Designed a 15-table normalized MySQL warehouse with indexing, partitioning, triggers, and stored procedures, then built a Power BI semantic layer over Python and SQL ETL.', impact:'Cut query latency 50% on 1M+ row workloads and powered real-time revenue and inventory dashboards.', github:'https://github.com/Priyanka5317/' },
-  { title:'Employee Retention Analysis', tags:['SQL','HR Analytics','Dashboards'], solution:'Wrote nested SQL queries and CTEs to surface churn patterns, built stored procedures for monitoring, and designed dashboards for HR stakeholders.', impact:'Improved early-warning attrition signals 20%, enabling targeted retention action.', github:'https://github.com/Priyanka5317/Employee-Analysis' },
-  { title:'Sleep Aid Sentiment Dashboards', tags:['Power BI','NLP','Pandas'], solution:'Analyzed 10,000+ Walmart reviews with pandas, n-grams, and TextBlob sentiment scoring, then visualized trends in Power BI.', impact:'Revealed a 15% higher preference for 10mg doses and lifted insight relevance 40% for marketing strategy.', github:'https://github.com/Priyanka5317/' },
-  { title:'WhoozCooking KPI Reporting', tags:['Power BI','Tableau','SQL'], solution:'Delivered Power BI and Tableau dashboards on retention, onboarding, and platform KPIs over a Redshift warehouse.', impact:'Enabled data-driven decisions across teams and faster self-serve reporting.', github:'https://github.com/Priyanka5317/WhoozCookingAPI' },
-  { title:'PodcastIQ Engagement Analytics', tags:['Snowflake','dbt','Analytics'], solution:'Built dbt models across 12,000+ tagged segments on Snowflake with semantic search for self-serve exploration.', impact:'Surfaced segment-level engagement insight to inform content strategy.', github:'https://github.com/Priyanka5317/PodcastIQ' },
-  { title:'F1 Pit-Strategy Simulator', tags:['R Shiny','Interactive','Modeling'], solution:'Built an interactive R Shiny app merging lap and weather data with survival and mixed-effects models.', impact:'Improved simulated pit-strategy success 25% with interactive what-if analysis.', github:'https://github.com/Priyanka5317/Statistical-Analysis-of-Tire-Performance-and-Pit-Strategy-in-Formula-1-Racing' },
+  { title:'E-Commerce Reporting Warehouse', tags:['Power BI','MySQL','DAX','ETL'], problem:'Slow queries and no real-time reporting on sales and inventory.', solution:'Designed a 15-table normalized MySQL warehouse with indexing, partitioning, triggers, and stored procedures, then built a Power BI semantic layer over Python and SQL ETL.', impact:'Cut query latency 50% on 1M+ row workloads and powered real-time revenue and inventory dashboards.', github:'https://github.com/Priyanka5317/' },
+  { title:'Employee Retention Analysis', tags:['SQL','HR Analytics','Dashboards'], problem:'HR lacked early-warning signals for attrition across tenure and departments.', solution:'Wrote nested SQL queries and CTEs to surface churn patterns, built stored procedures for monitoring, and designed dashboards for HR stakeholders.', impact:'Improved early-warning attrition signals 20%, enabling targeted retention action.', github:'https://github.com/Priyanka5317/Employee-Analysis' },
+  { title:'Sleep Aid Sentiment Dashboards', tags:['Power BI','NLP','Pandas'], problem:'Marketers had no visibility into what customers valued in reviews.', solution:'Analyzed 10,000+ Walmart reviews with pandas, n-grams, and TextBlob sentiment scoring, then visualized trends in Power BI.', impact:'Revealed a 15% higher preference for 10mg doses and lifted insight relevance 40% for marketing strategy.', github:'https://github.com/Priyanka5317/' },
+  { title:'WhoozCooking KPI Reporting', tags:['Power BI','Tableau','SQL'], problem:'Product, Marketing, and Finance needed shared visibility into retention and onboarding.', solution:'Delivered Power BI and Tableau dashboards on retention, onboarding, and platform KPIs over a Redshift warehouse.', impact:'Enabled data-driven decisions across teams and faster self-serve reporting.', github:'https://github.com/Priyanka5317/WhoozCookingAPI' },
+  { title:'PodcastIQ Engagement Analytics', tags:['Snowflake','dbt','Analytics'], problem:'Podcast teams could not see which segments drove engagement.', solution:'Built dbt models across 12,000+ tagged segments on Snowflake with semantic search for self-serve exploration.', impact:'Surfaced segment-level engagement insight to inform content strategy.', github:'https://github.com/Priyanka5317/PodcastIQ' },
+  { title:'F1 Pit-Strategy Simulator', tags:['R Shiny','Interactive','Modeling'], problem:'Race strategists needed to weigh tire grip against durability in real time.', solution:'Built an interactive R Shiny app merging lap and weather data with survival and mixed-effects models.', impact:'Improved simulated pit-strategy success 25% with interactive what-if analysis.', github:'https://github.com/Priyanka5317/Statistical-Analysis-of-Tire-Performance-and-Pit-Strategy-in-Formula-1-Racing' },
 ];
 const skills = {
   'BI & Visualization': ['Power BI (DAX)','Tableau','Looker','TIBCO Spotfire','Streamlit','Seaborn','ggplot2','Matplotlib'],
@@ -208,9 +208,12 @@ document.getElementById('work-list').innerHTML = projects.map(p=>`
       <h3 class="serif text-2xl group-hover:text-[color:var(--accent)] transition">${p.title}</h3>
       <span class="muted group-hover:text-[color:var(--accent)] transition text-xl">&#8599;</span>
     </div>
-    <p class="label mt-1 mb-3">${p.tags.join(' &middot; ')}</p>
-    <p class="soft leading-relaxed max-w-2xl">${p.solution}</p>
-    <p class="accent2 text-sm mt-2 max-w-2xl">${p.impact}</p>
+    <p class="label mt-1 mb-4">${p.tags.join(' &middot; ')}</p>
+    <div class="grid sm:grid-cols-3 gap-5">
+      <div><p class="label mb-1" style="color:#7c3aed;">The Problem</p><p class="soft text-[0.92rem] leading-relaxed">${p.problem}</p></div>
+      <div><p class="label mb-1" style="color:#c0407e;">The Solution</p><p class="soft text-[0.92rem] leading-relaxed">${p.solution}</p></div>
+      <div><p class="label mb-1" style="color:#16a34a;">The Impact</p><p class="soft text-[0.92rem] leading-relaxed">${p.impact}</p></div>
+    </div>
   </a>`).join('');
 
 document.getElementById('skills-grid').innerHTML = Object.entries(skills).map(([k,arr])=>`
