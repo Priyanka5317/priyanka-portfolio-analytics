@@ -22,14 +22,14 @@
           mono: ['JetBrains Mono', 'monospace'],
         },
         colors: {
-          bg: '#140d1f',
-          card: '#1e1533',
-          border: '#2e2447',
-          ink: '#f3eefb',
-          muted: '#b6a9d6',
-          teal: '#f7a8cd',
-          gold: '#c4b5fd',
-          sky: '#b794f6',
+          bg: '#fdf2f8',
+          card: '#ffffff',
+          border: '#f3d9e8',
+          ink: '#3a2740',
+          muted: '#8a6f86',
+          teal: '#db2777',
+          gold: '#9333ea',
+          sky: '#7c3aed',
         }
       }
     }
@@ -37,27 +37,26 @@
 </script>
 <style>
   html { scroll-behavior:smooth; }
-  body { background:#140d1f; color:#f3eefb; font-family:'Inter',sans-serif; overflow-x:hidden; }
+  body { background:#fdf2f8; color:#3a2740; font-family:'Inter',sans-serif; overflow-x:hidden; }
 
   #bg3d { position:fixed; inset:0; width:100vw; height:100vh; z-index:-2; pointer-events:none; display:block; }
   #veil {
     position:fixed; inset:0; z-index:-1; pointer-events:none;
     background:
-      radial-gradient(120% 90% at 50% 35%, rgba(20,13,31,0.28), rgba(20,13,31,0.52) 100%),
-      linear-gradient(180deg, rgba(20,13,31,0.46) 0%, rgba(20,13,31,0.30) 38%, rgba(20,13,31,0.58) 100%);
+      radial-gradient(130% 100% at 50% 35%, rgba(255,255,255,0.04), rgba(255,255,255,0.34) 100%);
   }
   body::before {
     content:''; position:fixed; inset:0; z-index:-3;
     background:
       radial-gradient(60% 50% at 50% 0%, rgba(247,168,205,0.12), transparent 60%),
       radial-gradient(50% 40% at 85% 75%, rgba(196,181,253,0.10), transparent 60%),
-      linear-gradient(180deg, #140d1f 0%, #1a1030 55%, #140d1f 100%);
+      linear-gradient(180deg, #fdf2f8 0%, #f9e4ee 55%, #fdf2f8 100%);
   }
 
   ::-webkit-scrollbar { width:8px; }
-  ::-webkit-scrollbar-track { background:#140d1f; }
-  ::-webkit-scrollbar-thumb { background:#2e2447; border-radius:4px; }
-  ::-webkit-scrollbar-thumb:hover { background:#f7a8cd; }
+  ::-webkit-scrollbar-track { background:#fdf2f8; }
+  ::-webkit-scrollbar-thumb { background:#f3d9e8; border-radius:4px; }
+  ::-webkit-scrollbar-thumb:hover { background:#db2777; }
 
   .reveal { opacity:0; transform:translateY(46px) scale(.985); transition:opacity .8s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.34,1.56,.64,1); will-change:opacity,transform; }
   .reveal.fl { transform:translateX(-80px) rotate(-2deg); }
@@ -67,34 +66,34 @@
   .reveal.show { opacity:1; transform:none; }
   @media (prefers-reduced-motion: reduce){ .reveal{transition:opacity .4s ease; transform:none;} .reveal.fl,.reveal.fr,.reveal.zm,.reveal.tw{transform:none;} }
 
-  .glow-teal { text-shadow:0 0 38px rgba(247,168,205,0.45), 0 2px 14px rgba(20,13,31,0.9); }
+  .glow-teal { text-shadow:0 0 38px rgba(247,168,205,0.45), 0 2px 14px rgba(255,255,255,0.9); }
   .nav-link { position:relative; }
-  .nav-link::after { content:''; position:absolute; bottom:-4px; left:0; width:0; height:2px; background:linear-gradient(90deg,#f7a8cd,#c4b5fd); transition:width .3s; }
+  .nav-link::after { content:''; position:absolute; bottom:-4px; left:0; width:0; height:2px; background:linear-gradient(90deg,#db2777,#9333ea); transition:width .3s; }
   .nav-link:hover::after { width:100%; }
 
   .pill { transition:all .3s; }
-  .pill:hover { background:#f7a8cd; color:#140d1f; border-color:#f7a8cd; transform:translateY(-2px); box-shadow:0 6px 22px rgba(247,168,205,0.35); }
+  .pill:hover { background:#db2777; color:#fdf2f8; border-color:#db2777; transform:translateY(-2px); box-shadow:0 6px 22px rgba(247,168,205,0.35); }
   .card { transition:all .4s cubic-bezier(.2,.8,.2,1); }
-  .card:hover { transform:translateY(-6px); border-color:#f7a8cd; box-shadow:0 24px 60px -24px rgba(247,168,205,0.5); }
+  .card:hover { transform:translateY(-6px); border-color:#db2777; box-shadow:0 24px 60px -24px rgba(247,168,205,0.5); }
 
-  .section-num { font-family:'Quicksand',sans-serif; font-weight:700; background:linear-gradient(135deg,#f7a8cd,#c4b5fd); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .section-num { font-family:'Quicksand',sans-serif; font-weight:700; background:linear-gradient(135deg,#db2777,#9333ea); -webkit-background-clip:text; background-clip:text; color:transparent; }
   .chip-label { font-family:'JetBrains Mono',monospace; font-size:.62rem; letter-spacing:.18em; text-transform:uppercase; }
 
   .timeline { position:relative; }
-  .timeline::before { content:''; position:absolute; left:20px; top:0; bottom:0; width:2px; background:linear-gradient(to bottom,#f7a8cd,#c4b5fd,transparent); }
+  .timeline::before { content:''; position:absolute; left:20px; top:0; bottom:0; width:2px; background:linear-gradient(to bottom,#db2777,#9333ea,transparent); }
   @media(min-width:768px){ .timeline::before{ left:50%; transform:translateX(-50%);} .tl-item{width:50%;} .tl-item.left{padding-right:3rem; text-align:right;} .tl-item.right{margin-left:50%; padding-left:3rem;} .tl-item.left .tl-dot{right:-9px; left:auto;} .tl-item.right .tl-dot{left:-9px;} }
   .tl-item { position:relative; padding-left:3.5rem; margin-bottom:2.6rem; }
   @media(min-width:768px){ .tl-item{ padding-left:0; } }
-  .tl-dot { position:absolute; left:12px; top:7px; width:18px; height:18px; border-radius:50%; background:#f7a8cd; border:3px solid #140d1f; box-shadow:0 0 0 3px #f7a8cd, 0 0 16px rgba(247,168,205,.6); z-index:2; }
+  .tl-dot { position:absolute; left:12px; top:7px; width:18px; height:18px; border-radius:50%; background:#db2777; border:3px solid #fdf2f8; box-shadow:0 0 0 3px #db2777, 0 0 16px rgba(247,168,205,.6); z-index:2; }
 
-  #loader { position:fixed; inset:0; z-index:100; background:#140d1f; display:flex; align-items:center; justify-content:center; transition:opacity .8s ease; }
+  #loader { position:fixed; inset:0; z-index:100; background:#fdf2f8; display:flex; align-items:center; justify-content:center; transition:opacity .8s ease; }
   #loader.hide { opacity:0; pointer-events:none; }
   .loader-inner { text-align:center; width:min(78vw,340px); }
-  .loader-logo { font-family:'Quicksand',sans-serif; font-weight:700; letter-spacing:.18em; font-size:1.1rem; background:linear-gradient(90deg,#f7a8cd,#c4b5fd); -webkit-background-clip:text; background-clip:text; color:transparent; margin-bottom:1rem; }
-  .loader-bar { height:3px; background:#2e2447; border-radius:3px; overflow:hidden; }
-  .loader-bar > span { display:block; height:100%; width:40%; background:linear-gradient(90deg,#f7a8cd,#c4b5fd); animation:ldr 1.1s cubic-bezier(.6,0,.4,1) infinite; }
+  .loader-logo { font-family:'Quicksand',sans-serif; font-weight:700; letter-spacing:.18em; font-size:1.1rem; background:linear-gradient(90deg,#db2777,#9333ea); -webkit-background-clip:text; background-clip:text; color:transparent; margin-bottom:1rem; }
+  .loader-bar { height:3px; background:#f3d9e8; border-radius:3px; overflow:hidden; }
+  .loader-bar > span { display:block; height:100%; width:40%; background:linear-gradient(90deg,#db2777,#9333ea); animation:ldr 1.1s cubic-bezier(.6,0,.4,1) infinite; }
   @keyframes ldr { 0%{transform:translateX(-120%);} 100%{transform:translateX(320%);} }
-  .loader-text { margin-top:1rem; font-family:'JetBrains Mono',monospace; font-size:.68rem; letter-spacing:.22em; color:#b6a9d6; text-transform:uppercase; }
+  .loader-text { margin-top:1rem; font-family:'JetBrains Mono',monospace; font-size:.68rem; letter-spacing:.22em; color:#8a6f86; text-transform:uppercase; }
 </style>
 </head>
 <body class="antialiased">
@@ -113,7 +112,7 @@
 <!-- NAV -->
 <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-lg bg-bg/70 border-b border-border">
   <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-    <a href="#home" class="font-display font-bold text-lg tracking-wider" style="background:linear-gradient(90deg,#f7a8cd,#c4b5fd);-webkit-background-clip:text;background-clip:text;color:transparent;">P.MANGRULKAR</a>
+    <a href="#home" class="font-display font-bold text-lg tracking-wider" style="background:linear-gradient(90deg,#db2777,#9333ea);-webkit-background-clip:text;background-clip:text;color:transparent;">P.MANGRULKAR</a>
     <div class="hidden md:flex gap-8 text-sm text-muted font-mono uppercase tracking-wider">
       <a href="#about" class="nav-link hover:text-teal">About</a>
       <a href="#experience" class="nav-link hover:text-teal">Experience</a>
@@ -128,35 +127,35 @@
 <section id="home" class="min-h-screen flex items-center px-6 pt-20 relative">
   <div class="max-w-6xl mx-auto w-full grid md:grid-cols-3 gap-12 items-center relative z-10">
     <div class="md:col-span-2">
-      <p class="font-display text-gold text-xs tracking-[0.32em] mb-4 reveal uppercase" style="text-shadow:0 1px 12px rgba(20,13,31,0.95);">// AI-augmented analytics</p>
+      <p class="font-display text-gold text-xs tracking-[0.32em] mb-4 reveal uppercase" style="text-shadow:0 1px 12px rgba(255,255,255,0.95);">// AI-augmented analytics</p>
       <h1 class="text-5xl md:text-7xl font-display font-bold tracking-tight mb-4 reveal leading-tight">
-        <span class="text-white">PRIYANKA</span><br/>
-        <span class="glow-teal" style="color:#f6b6d6;">MANGRULKAR</span><span class="text-gold">_</span>
+        <span class="text-ink">PRIYANKA</span><br/>
+        <span class="glow-teal" style="color:#db2777;">MANGRULKAR</span><span class="text-gold">_</span>
       </h1>
-      <p class="text-xl md:text-2xl text-ink mb-2 reveal font-semibold" style="text-shadow:0 1px 14px rgba(20,13,31,0.95);">Data Analyst · Business Analyst · BI Developer</p>
-      <p class="text-ink/95 mb-5 reveal max-w-xl mt-3" style="text-shadow:0 1px 14px rgba(20,13,31,0.92);">I turn messy operational data into executive-ready insight. I build Power BI and Tableau dashboards, automate reporting with SQL and Excel, and partner with stakeholders to make the numbers tell a clear story.</p>
+      <p class="text-xl md:text-2xl text-ink mb-2 reveal font-semibold" style="text-shadow:0 1px 14px rgba(255,255,255,0.95);">Data Analyst · Business Analyst · BI Developer</p>
+      <p class="text-ink/95 mb-5 reveal max-w-xl mt-3" style="text-shadow:0 1px 14px rgba(255,255,255,0.92);">I turn messy operational data into executive-ready insight. I build Power BI and Tableau dashboards, automate reporting with SQL and Excel, and partner with stakeholders to make the numbers tell a clear story.</p>
 
       <div class="flex flex-wrap gap-2 mb-6 reveal">
-        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded text-xs font-display font-bold tracking-wider" style="color:#e4d6ff; background:rgba(196,181,253,0.22); border:1px solid rgba(196,181,253,0.6); box-shadow:0 0 16px rgba(196,181,253,0.32);">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-display font-bold tracking-wider" style="color:#6d28d9; background:rgba(124,58,237,0.10); border:1px solid rgba(124,58,237,0.35);">
           POWER BI · TABLEAU
         </span>
-        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded text-xs font-display font-bold tracking-wider" style="color:#dcccff; background:rgba(183,148,246,0.22); border:1px solid rgba(183,148,246,0.6); box-shadow:0 0 16px rgba(183,148,246,0.32);">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-display font-bold tracking-wider" style="color:#7e22ce; background:rgba(147,51,234,0.10); border:1px solid rgba(147,51,234,0.35);">
           ANTHROPIC CERTIFIED
         </span>
-        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded text-xs font-display font-bold tracking-wider" style="color:#ffd6ea; background:rgba(247,168,205,0.20); border:1px solid rgba(247,168,205,0.6); box-shadow:0 0 16px rgba(247,168,205,0.32);">
-          <span class="w-2 h-2 rounded-full animate-pulse inline-block" style="background:#f7a8cd;"></span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-display font-bold tracking-wider" style="color:#be185d; background:rgba(219,39,119,0.10); border:1px solid rgba(219,39,119,0.35);">
+          <span class="w-2 h-2 rounded-full animate-pulse inline-block" style="background:#db2777;"></span>
           OPEN TO WORK
         </span>
       </div>
 
       <div class="flex flex-wrap gap-4 reveal">
-        <a href="#projects" class="px-6 py-3 font-display font-bold text-sm tracking-wider rounded-full uppercase transition" style="background:#f7a8cd; color:#140d1f;" onmouseover="this.style.background='#c4b5fd'" onmouseout="this.style.background='#f7a8cd'">View Work</a>
-        <a href="#contact" class="px-6 py-3 rounded-full transition font-mono text-sm uppercase tracking-wider" style="color:#dcccff; border:1px solid rgba(196,181,253,0.55);" onmouseover="this.style.borderColor='#c4b5fd'" onmouseout="this.style.borderColor='rgba(196,181,253,0.55)'">Get in Touch</a>
+        <a href="#projects" class="px-6 py-3 font-display font-bold text-sm tracking-wider rounded-full uppercase transition" style="background:#db2777; color:#fff;" onmouseover="this.style.background='#9333ea'" onmouseout="this.style.background='#db2777'">View Work</a>
+        <a href="#contact" class="px-6 py-3 rounded-full transition font-mono text-sm uppercase tracking-wider" style="color:#be185d; border:1px solid rgba(219,39,119,0.45);" onmouseover="this.style.borderColor='#db2777'" onmouseout="this.style.borderColor='rgba(219,39,119,0.45)'">Get in Touch</a>
       </div>
     </div>
     <div class="flex justify-center reveal">
       <div class="relative">
-        <div class="absolute -inset-4 blur-3xl opacity-30 rounded-full" style="background:radial-gradient(circle,#f7a8cd,#c4b5fd);"></div>
+        <div class="absolute -inset-4 blur-3xl opacity-30 rounded-full" style="background:radial-gradient(circle,#db2777,#9333ea);"></div>
         <div class="absolute -inset-1 rounded-full" style="border:2px solid rgba(247,168,205,0.4);"></div>
         <img src="/images/profile.jpg" onerror="this.src='/images/profile.svg'" alt="Priyanka Mangrulkar" class="relative w-56 h-56 md:w-64 md:h-64 rounded-full object-cover" style="border:4px solid rgba(247,168,205,0.5);"/>
       </div>
@@ -169,11 +168,11 @@
   <div class="max-w-6xl mx-auto relative z-10">
     <div class="flex items-center gap-4 mb-10 reveal">
       <span class="section-num text-sm">01</span>
-      <h2 class="text-3xl md:text-4xl font-display font-bold text-white">ABOUT</h2>
+      <h2 class="text-3xl md:text-4xl font-display font-bold text-ink">ABOUT</h2>
       <div class="flex-1 h-px" style="background:linear-gradient(90deg,rgba(247,168,205,0.5),transparent);"></div>
     </div>
     <div class="grid md:grid-cols-3 gap-10 reveal">
-      <div class="md:col-span-2 space-y-4 text-ink/95 leading-relaxed" style="text-shadow:0 1px 12px rgba(20,13,31,0.92);">
+      <div class="md:col-span-2 space-y-4 text-ink/95 leading-relaxed" style="text-shadow:0 1px 12px rgba(255,255,255,0.92);">
         <p>I am a business-focused analyst who bridges data and decisions. Currently finishing my <span class="text-teal font-semibold">M.S. in Information Systems at Northeastern University</span>, I specialize in operational reporting, BI development, and stakeholder analysis.</p>
         <p>At IST Management I lifted reporting accuracy 40% and cut manual effort 50% by automating Excel (Power Query, VBA, Macros) and SQL workflows on 1,000+ daily service-request records, and I owned validation, reconciliation, and audit reporting. I build Power BI and Tableau dashboards on resolution time, throughput, productivity, and KPI trends for managers and executive review.</p>
         <p>I also bring an AI edge to analytics. I am <span class="text-teal font-semibold">Anthropic certified</span> and use LLMs, Snowflake Cortex AI, and Python automation to speed up analysis, reporting, and data quality, plus predictive modeling with scikit-learn when the question calls for it.</p>
@@ -182,17 +181,17 @@
       <div class="space-y-3 text-sm">
         <div class="p-5 bg-card border border-border rounded-2xl">
           <p class="chip-label text-gold mb-1">EDUCATION</p>
-          <p class="text-white font-semibold">M.S. Information Systems</p>
+          <p class="text-ink font-semibold">M.S. Information Systems</p>
           <p class="text-muted">Northeastern University</p>
           <p class="text-muted text-xs mt-1">Jan 2024 to May 2026</p>
         </div>
         <div class="p-5 bg-card border border-border rounded-2xl">
           <p class="chip-label text-gold mb-1">FOCUS</p>
-          <p class="text-white font-semibold">Dashboards · Reporting · KPIs</p>
+          <p class="text-ink font-semibold">Dashboards · Reporting · KPIs</p>
         </div>
         <div class="p-5 bg-card border border-border rounded-2xl">
           <p class="chip-label text-gold mb-1">STATUS</p>
-          <p class="text-white font-semibold flex items-center gap-2"><span class="w-2 h-2 rounded-full animate-pulse" style="background:#f7a8cd;"></span> Open to Work · 2026</p>
+          <p class="text-ink font-semibold flex items-center gap-2"><span class="w-2 h-2 rounded-full animate-pulse" style="background:#db2777;"></span> Open to Work · 2026</p>
         </div>
       </div>
     </div>
@@ -204,7 +203,7 @@
   <div class="max-w-6xl mx-auto relative z-10">
     <div class="flex items-center gap-4 mb-12 reveal">
       <span class="section-num text-sm">02</span>
-      <h2 class="text-3xl md:text-4xl font-display font-bold text-white">EXPERIENCE</h2>
+      <h2 class="text-3xl md:text-4xl font-display font-bold text-ink">EXPERIENCE</h2>
       <div class="flex-1 h-px" style="background:linear-gradient(90deg,rgba(247,168,205,0.5),transparent);"></div>
     </div>
     <div class="timeline" id="timeline"></div>
@@ -216,10 +215,10 @@
   <div class="max-w-6xl mx-auto relative z-10">
     <div class="flex items-center gap-4 mb-4 reveal">
       <span class="section-num text-sm">03</span>
-      <h2 class="text-3xl md:text-4xl font-display font-bold text-white">SELECTED WORK</h2>
+      <h2 class="text-3xl md:text-4xl font-display font-bold text-ink">SELECTED WORK</h2>
       <div class="flex-1 h-px" style="background:linear-gradient(90deg,rgba(247,168,205,0.5),transparent);"></div>
     </div>
-    <p class="text-ink/80 mb-10 reveal font-mono text-sm" style="text-shadow:0 1px 12px rgba(20,13,31,0.95);">Dashboards, reporting, and analysis that move the business.</p>
+    <p class="text-ink/80 mb-10 reveal font-mono text-sm" style="text-shadow:0 1px 12px rgba(255,255,255,0.95);">Dashboards, reporting, and analysis that move the business.</p>
     <div class="grid md:grid-cols-2 gap-6" id="projects-grid"></div>
   </div>
 </section>
@@ -229,7 +228,7 @@
   <div class="max-w-6xl mx-auto relative z-10">
     <div class="flex items-center gap-4 mb-10 reveal">
       <span class="section-num text-sm">04</span>
-      <h2 class="text-3xl md:text-4xl font-display font-bold text-white">TOOLKIT</h2>
+      <h2 class="text-3xl md:text-4xl font-display font-bold text-ink">TOOLKIT</h2>
       <div class="flex-1 h-px" style="background:linear-gradient(90deg,rgba(247,168,205,0.5),transparent);"></div>
     </div>
     <div class="grid md:grid-cols-2 gap-8 reveal">
@@ -247,7 +246,7 @@
   <div class="max-w-6xl mx-auto relative z-10">
     <div class="flex items-center gap-4 mb-10 reveal">
       <span class="section-num text-sm">05</span>
-      <h2 class="text-3xl md:text-4xl font-display font-bold text-white">CERTIFICATIONS</h2>
+      <h2 class="text-3xl md:text-4xl font-display font-bold text-ink">CERTIFICATIONS</h2>
       <div class="flex-1 h-px" style="background:linear-gradient(90deg,rgba(247,168,205,0.5),transparent);"></div>
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6" id="certs-grid"></div>
@@ -258,17 +257,17 @@
 <section id="contact" class="py-32 px-6 text-center relative">
   <div class="max-w-2xl mx-auto relative z-10">
     <p class="font-display text-gold text-xs tracking-[0.32em] mb-4 reveal uppercase">// Let's talk</p>
-    <h2 class="text-4xl md:text-5xl font-display font-bold mb-6 reveal text-white">LET'S <span class="glow-teal" style="color:#f6b6d6;">CONNECT</span></h2>
-    <p class="text-ink/95 mb-10 reveal" style="text-shadow:0 1px 14px rgba(20,13,31,0.92);">I am looking for full-time roles in Data Analytics, Business Analysis, and BI Development. If your team needs clear reporting and dashboards that drive decisions, let's talk.</p>
+    <h2 class="text-4xl md:text-5xl font-display font-bold mb-6 reveal text-ink">LET'S <span class="glow-teal" style="color:#db2777;">CONNECT</span></h2>
+    <p class="text-ink/95 mb-10 reveal" style="text-shadow:0 1px 14px rgba(255,255,255,0.92);">I am looking for full-time roles in Data Analytics, Business Analysis, and BI Development. If your team needs clear reporting and dashboards that drive decisions, let's talk.</p>
     <div class="flex flex-wrap justify-center gap-4 reveal">
-      <a href="mailto:mangrulkarp@northeastern.edu" class="px-6 py-3 font-display font-bold text-sm tracking-wider rounded uppercase transition" style="background:#f7a8cd;color:#140d1f;" onmouseover="this.style.background='#c4b5fd'" onmouseout="this.style.background='#f7a8cd'">Email Me</a>
+      <a href="mailto:mangrulkarp@northeastern.edu" class="px-6 py-3 font-display font-bold text-sm tracking-wider rounded uppercase transition" style="background:#db2777;color:#fdf2f8;" onmouseover="this.style.background='#9333ea'" onmouseout="this.style.background='#db2777'">Email Me</a>
       <a href="https://www.linkedin.com/in/priyanka-mangrulkar/" target="_blank" class="px-6 py-3 border border-border bg-card rounded hover:border-teal transition font-mono text-sm uppercase tracking-wider">LinkedIn</a>
       <a href="https://github.com/Priyanka5317/" target="_blank" class="px-6 py-3 border border-border bg-card rounded hover:border-teal transition font-mono text-sm uppercase tracking-wider">GitHub</a>
     </div>
   </div>
 </section>
 
-<footer class="py-8 px-6 text-center text-ink/80 text-xs font-display tracking-wider border-t border-border relative" style="z-index:1; text-shadow:0 1px 12px rgba(20,13,31,0.95);">
+<footer class="py-8 px-6 text-center text-ink/80 text-xs font-display tracking-wider border-t border-border relative" style="z-index:1; text-shadow:0 1px 12px rgba(255,255,255,0.95);">
   <p>PRIYANKA MANGRULKAR · DATA ANALYTICS · BUSINESS ANALYSIS · BI · © 2026</p>
 </footer>
 
@@ -321,7 +320,7 @@ timeline.forEach(item => {
         <span class="px-2 py-1 rounded chip-label text-teal" style="background:rgba(247,168,205,0.12);">${item.type}</span>
         <span class="font-mono text-xs text-muted">${item.date}</span>
       </div>
-      <h3 class="font-semibold text-white text-lg">${item.title}</h3>
+      <h3 class="font-semibold text-ink text-lg">${item.title}</h3>
       <p class="text-teal text-sm mb-2">${item.org}</p>
       <p class="text-muted text-sm">${item.desc}</p>
     </div>`;
@@ -335,19 +334,19 @@ projects.forEach((p,i) => {
   a.className = 'card reveal tw block bg-card border border-border rounded-2xl overflow-hidden';
   a.style.transitionDelay = (i%2)*0.1 + 's';
   a.innerHTML = `
-    <div class="aspect-[400/220] overflow-hidden border-b border-border relative" style="background:#1e1533;">
+    <div class="aspect-[400/220] overflow-hidden border-b border-border relative" style="background:#ffffff;">
       <img src="${p.img}" alt="${p.title}" class="w-full h-full object-cover"/>
-      <div class="absolute top-2 right-2 chip-label px-2 py-0.5 rounded" style="background:#f7a8cd;color:#140d1f;">${String(i+1).padStart(2,'0')}</div>
+      <div class="absolute top-2 right-2 chip-label px-2 py-0.5 rounded" style="background:#db2777;color:#fdf2f8;">${String(i+1).padStart(2,'0')}</div>
     </div>
     <div class="p-6">
-      <h3 class="text-lg font-bold text-white font-display mb-4">${p.title}</h3>
+      <h3 class="text-lg font-bold text-ink font-display mb-4">${p.title}</h3>
       <div class="space-y-3 mb-4">
         <div><p class="chip-label text-gold mb-1">▸ PROBLEM</p><p class="text-sm text-ink/80">${p.problem}</p></div>
         <div><p class="chip-label text-teal mb-1">▸ APPROACH</p><p class="text-sm text-ink/80">${p.solution}</p></div>
         <div><p class="chip-label text-sky mb-1">▸ IMPACT</p><p class="text-sm text-ink/80">${p.impact}</p></div>
       </div>
       <div class="flex flex-wrap gap-2 pt-3 border-t border-border">
-        ${p.tags.map(t=>`<span class="px-2 py-1 rounded chip-label" style="color:#f6b6d6;background:rgba(247,168,205,0.12);">${t}</span>`).join('')}
+        ${p.tags.map(t=>`<span class="px-2 py-1 rounded chip-label" style="color:#db2777;background:rgba(247,168,205,0.12);">${t}</span>`).join('')}
       </div>
     </div>`;
   grid.appendChild(a);
@@ -371,7 +370,7 @@ certs.forEach((c,i) => {
   div.style.transitionDelay = (i*0.08)+'s';
   div.innerHTML = `
     <div class="chip-label text-gold mb-3">CERTIFIED</div>
-    <h3 class="font-bold text-white mb-1 text-sm">${c.title}</h3>
+    <h3 class="font-bold text-ink mb-1 text-sm">${c.title}</h3>
     <p class="text-muted text-xs">${c.desc}</p>
     <p class="font-mono text-xs text-teal mt-2">${c.org}</p>`;
   certsGrid.appendChild(div);
@@ -404,16 +403,16 @@ document.addEventListener('visibilitychange', ()=>{ if(revealsArmed) checkReveal
   renderer.setSize(innerWidth, innerHeight);
 
   const scene = new THREE.Scene();
-  scene.fog = new THREE.FogExp2(0x140d1f, 0.025);
+  scene.fog = new THREE.FogExp2(0xfdf2f8, 0.022);
   const camera = new THREE.PerspectiveCamera(50, innerWidth/innerHeight, 0.1, 300);
   camera.position.set(0, 10, 24);
   camera.lookAt(0, 2, -6);
 
   // lights
-  scene.add(new THREE.HemisphereLight(0xe9d9ff, 0x140d1f, 0.7));
+  scene.add(new THREE.HemisphereLight(0xffffff, 0xfde6f1, 0.95));
   const key = new THREE.DirectionalLight(0xffffff, 0.9); key.position.set(6, 18, 10); scene.add(key);
-  const pTeal = new THREE.PointLight(0xb794f6, 1.5, 70); pTeal.position.set(-14, 8, 6); scene.add(pTeal);
-  const pGold = new THREE.PointLight(0xf7a8cd, 1.2, 70); pGold.position.set(16, 6, -4); scene.add(pGold);
+  const pTeal = new THREE.PointLight(0x7c3aed, 1.3, 70); pTeal.position.set(-14, 8, 6); scene.add(pTeal);
+  const pGold = new THREE.PointLight(0xdb2777, 1.1, 70); pGold.position.set(16, 6, -4); scene.add(pGold);
 
   // chart-bar terrain via InstancedMesh
   const GX = 30, GZ = 18, GAP = 1.25;
@@ -424,7 +423,7 @@ document.addEventListener('visibilitychange', ()=>{ if(revealsArmed) checkReveal
   const bars = new THREE.InstancedMesh(barGeo, barMat, COUNT);
   bars.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
   const dummy = new THREE.Object3D();
-  const cLow = new THREE.Color(0x4b2d6b), cMid = new THREE.Color(0xc4b5fd), cHi = new THREE.Color(0xf7a8cd);
+  const cLow = new THREE.Color(0x7c3aed), cMid = new THREE.Color(0x9333ea), cHi = new THREE.Color(0xdb2777);
   const cells = [];
   let idx = 0;
   for (let ix=0; ix<GX; ix++){
@@ -453,7 +452,7 @@ document.addEventListener('visibilitychange', ()=>{ if(revealsArmed) checkReveal
   for (let i=0;i<3;i++){
     const m = new THREE.Mesh(
       new THREE.PlaneGeometry(70, 26, 1, 1),
-      new THREE.MeshBasicMaterial({ map:auroraTex(), transparent:true, opacity:0.5, blending:THREE.AdditiveBlending, depthWrite:false, side:THREE.DoubleSide })
+      new THREE.MeshBasicMaterial({ map:auroraTex(), transparent:true, opacity:0.32, blending:THREE.NormalBlending, depthWrite:false, side:THREE.DoubleSide })
     );
     m.position.set((i-1)*10, 12 + i*2, -28 - i*6);
     m.rotation.z = (i-1)*0.12;
