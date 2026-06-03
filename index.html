@@ -4,245 +4,196 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Priyanka Mangrulkar | Data Analyst · Business Analyst · BI Developer</title>
-<meta name="description" content="Priyanka Mangrulkar turns operational data into executive-ready insight with Power BI, Tableau, SQL, and Excel automation, with an AI-augmented workflow. Data Analyst, Business Analyst, and BI Developer based in Boston." />
+<meta name="description" content="Priyanka Mangrulkar turns operational data into executive-ready insight. Data Analyst, Business Analyst, and BI Developer based in Boston." />
 <script src="https://cdn.tailwindcss.com"></script>
 <script type="module">
   import { inject } from 'https://esm.sh/@vercel/analytics';
   inject();
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root{ --bg:#faf5f2; --text:#3b2d3a; --muted:#8a7585; --soft:#6b5763; --accent:#c0407e; --accent2:#7c3aed; --line:#ecdde5; --card:#ffffff; }
+  :root{ --bg:#f5f1ea; --ink:#1a1716; --muted:#8a807a; --soft:#4a4440; --accent:#c0407e; --line:rgba(26,23,22,0.13); }
   html{ scroll-behavior:smooth; }
-  body{ background:var(--bg); color:var(--text); font-family:'Inter',sans-serif; }
-  .serif{ font-family:'Playfair Display',serif; }
-  .muted{ color:var(--muted); }
-  .soft{ color:var(--soft); }
-  .accent{ color:var(--accent); }
-  .accent2{ color:var(--accent2); }
-  .label{ font-size:.62rem; letter-spacing:.22em; text-transform:uppercase; color:var(--muted); font-weight:600; }
-  .num-acc{ font-family:'Playfair Display',serif; background:linear-gradient(120deg,#c0407e,#7c3aed); -webkit-background-clip:text; background-clip:text; color:transparent; }
-  .grad-text{ background:linear-gradient(120deg,#c0407e,#7c3aed); -webkit-background-clip:text; background-clip:text; color:transparent; }
-  .rule{ height:1px; background:linear-gradient(90deg,#d9b8cb,transparent); }
-  .tile{ background:var(--card); border:1px solid var(--line); border-radius:1.5rem; box-shadow:0 12px 34px -22px rgba(124,58,237,0.30); }
-  .chip{ background:rgba(192,64,126,0.07); color:var(--accent); border:1px solid rgba(192,64,126,0.18); }
-  .navlink{ position:relative; }
-  .navlink::after{ content:''; position:absolute; left:0; bottom:-3px; width:0; height:1px; background:var(--accent); transition:width .3s; }
-  .navlink:hover::after{ width:100%; }
-  .ulink{ background-image:linear-gradient(var(--accent),var(--accent)); background-size:0% 1px; background-repeat:no-repeat; background-position:0 100%; transition:background-size .3s; padding-bottom:2px; }
-  .ulink:hover{ background-size:100% 1px; }
-  .reveal{ opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .8s cubic-bezier(.2,.7,.2,1); }
+  body{ background:var(--bg); color:var(--ink); font-family:'Inter',sans-serif; }
+  .ar{ font-family:'Archivo',sans-serif; }
+  .accent{ color:var(--accent); } .muted{ color:var(--muted); } .soft{ color:var(--soft); }
+  .lbl{ font-family:'Archivo',sans-serif; text-transform:uppercase; letter-spacing:0.2em; font-size:0.7rem; font-weight:600; }
+  .pi{ font-family:'Archivo',sans-serif; text-transform:uppercase; letter-spacing:0.16em; font-size:0.6rem; font-weight:700; color:var(--accent); display:block; margin-bottom:4px; }
+  .topline{ border-top:1px solid var(--line); }
+  .navlink{ position:relative; } .navlink:hover{ color:var(--accent); }
+  .idx .t{ transition:padding .35s, color .25s; }
+  .idx:hover .t{ padding-left:.6rem; color:var(--accent); }
+  .reveal{ opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
   .reveal.show{ opacity:1; transform:none; }
-  @media (prefers-reduced-motion: reduce){ .reveal{ transition:opacity .3s ease; transform:none; } }
-  ::-webkit-scrollbar{ width:9px; } ::-webkit-scrollbar-track{ background:var(--bg); } ::-webkit-scrollbar-thumb{ background:#e3cdd9; border-radius:5px; } ::-webkit-scrollbar-thumb:hover{ background:var(--accent); }
+  @media (prefers-reduced-motion: reduce){ .reveal{ transition:opacity .3s; transform:none; } }
+  ::selection{ background:#c0407e; color:#fff; }
 </style>
 </head>
 <body class="antialiased">
+<div class="max-w-5xl mx-auto px-6">
 
-<!-- NAV -->
-<nav class="sticky top-0 z-50 backdrop-blur-md" style="background:rgba(250,245,242,0.8); border-bottom:1px solid var(--line);">
-  <div class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
-    <a href="#top" class="serif text-lg">Priyanka Mangrulkar</a>
-    <div class="hidden sm:flex gap-7 text-sm muted">
-      <a href="#about" class="navlink hover:text-[color:var(--accent)]">About</a>
-      <a href="#experience" class="navlink hover:text-[color:var(--accent)]">Experience</a>
-      <a href="#work" class="navlink hover:text-[color:var(--accent)]">Work</a>
-      <a href="#contact" class="navlink hover:text-[color:var(--accent)]">Contact</a>
-    </div>
-  </div>
-</nav>
-
-<main id="top" class="max-w-4xl mx-auto px-6">
-
-  <!-- HERO -->
-  <header class="pt-20 pb-14 grid md:grid-cols-[1fr_auto] gap-10 items-center">
-    <div>
-      <p class="serif italic text-xl muted mb-5 reveal">Turning data into decisions.</p>
-      <h1 class="serif text-5xl sm:text-6xl leading-[1.05] mb-6 reveal">Priyanka<br/><span class="grad-text">Mangrulkar</span></h1>
-      <div class="rule w-36 mb-6 reveal"></div>
-      <p class="text-lg soft max-w-xl leading-relaxed reveal">Data Analyst, Business Analyst and BI Developer. I turn messy operational data into executive-ready insight with Power BI, Tableau, SQL and Excel automation, plus an AI-augmented workflow.</p>
-      <div class="flex flex-wrap items-center gap-x-6 gap-y-3 mt-7 reveal text-sm">
-        <a href="mailto:mangrulkarp@northeastern.edu" class="ulink accent font-medium">Email</a>
-        <a href="https://www.linkedin.com/in/priyanka-mangrulkar/" target="_blank" class="ulink accent font-medium">LinkedIn</a>
-        <a href="https://github.com/Priyanka5317/" target="_blank" class="ulink accent font-medium">GitHub</a>
-        <span class="inline-flex items-center gap-2 chip px-3 py-1 rounded-full text-xs font-semibold"><span class="w-1.5 h-1.5 rounded-full" style="background:var(--accent);"></span>Open to Work</span>
-      </div>
-    </div>
-    <div class="flex md:block justify-center reveal">
-      <div class="relative">
-        <div class="absolute -inset-3 rounded-full blur-2xl opacity-40" style="background:radial-gradient(circle,#f9a8d4,#c4b5fd);"></div>
-        <img src="/images/profile.jpg" onerror="this.src='/images/profile.svg'" alt="Priyanka Mangrulkar" class="relative w-40 h-40 md:w-44 md:h-44 rounded-full object-cover" style="border:4px solid #fff; box-shadow:0 10px 30px -12px rgba(192,64,126,0.4);"/>
-      </div>
-    </div>
+  <!-- header -->
+  <header class="flex justify-between items-center py-6 ar text-sm font-medium uppercase tracking-wider">
+    <a href="#top">Priyanka Mangrulkar</a>
+    <nav class="hidden sm:flex gap-7 muted">
+      <a href="#about" class="navlink">About</a>
+      <a href="#experience" class="navlink">Experience</a>
+      <a href="#work" class="navlink">Work</a>
+      <a href="#contact" class="navlink">Contact</a>
+    </nav>
+    <span class="accent">Open to Work</span>
   </header>
 
-  <!-- BENTO METRIC STRIP -->
-  <section class="grid grid-cols-2 lg:grid-cols-4 gap-4 pb-16" id="metrics"></section>
-
-  <!-- ABOUT -->
-  <section id="about" class="py-14">
-    <div class="flex items-baseline gap-4 mb-7 reveal">
-      <span class="serif italic text-xl muted">01</span>
-      <h2 class="serif text-3xl">About</h2>
-      <div class="rule flex-1 self-center"></div>
-    </div>
-    <div class="space-y-4 soft leading-loose text-lg max-w-2xl reveal">
-      <p>I am a business-focused analyst who bridges data and decisions. Currently finishing my <span class="accent2 font-semibold">M.S. in Information Systems at Northeastern University</span>, I specialize in operational reporting, BI development, and stakeholder analysis.</p>
-      <p>At IST Management I lifted reporting accuracy 40% and cut manual effort 50% by automating Excel and SQL workflows on 1,000+ daily service-request records, and I owned validation, reconciliation, and audit reporting. I bring an AI edge too: I am <span class="accent2 font-semibold">Anthropic certified</span> and use LLMs, Snowflake Cortex AI, and Python automation to speed up analysis.</p>
-      <p>I am actively seeking roles in <span class="accent font-semibold">Data Analytics, Business Analysis, and BI Development</span>.</p>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section id="experience" class="py-14">
-    <div class="flex items-baseline gap-4 mb-4 reveal">
-      <span class="serif italic text-xl muted">02</span>
-      <h2 class="serif text-3xl">Experience</h2>
-      <div class="rule flex-1 self-center"></div>
-    </div>
-    <div id="experience-list"></div>
-  </section>
-
-  <!-- SELECTED WORK -->
-  <section id="work" class="py-14">
-    <div class="flex items-baseline gap-4 mb-4 reveal">
-      <span class="serif italic text-xl muted">03</span>
-      <h2 class="serif text-3xl">Selected Work</h2>
-      <div class="rule flex-1 self-center"></div>
-    </div>
-    <div id="work-list"></div>
-  </section>
-
-  <!-- TOOLKIT (bento) -->
-  <section id="skills" class="py-14">
-    <div class="flex items-baseline gap-4 mb-8 reveal">
-      <span class="serif italic text-xl muted">04</span>
-      <h2 class="serif text-3xl">Toolkit</h2>
-      <div class="rule flex-1 self-center"></div>
-    </div>
-    <div class="grid sm:grid-cols-2 gap-4" id="skills-grid"></div>
-  </section>
-
-  <!-- CERTIFICATIONS -->
-  <section id="certs" class="py-14">
-    <div class="flex items-baseline gap-4 mb-8 reveal">
-      <span class="serif italic text-xl muted">05</span>
-      <h2 class="serif text-3xl">Certifications</h2>
-      <div class="rule flex-1 self-center"></div>
-    </div>
-    <div class="grid sm:grid-cols-2 gap-4" id="certs-grid"></div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="py-24 text-center">
-    <p class="serif italic muted mb-3 reveal">06 &middot; Finish line</p>
-    <h2 class="serif text-4xl sm:text-5xl mb-5 reveal">Let's work together</h2>
-    <p class="soft max-w-md mx-auto mb-9 reveal">Open to roles in Data Analytics, Business Analysis, and BI Development. If your team needs reporting and dashboards that drive decisions, let's talk.</p>
-    <div class="flex flex-wrap justify-center gap-4 reveal">
-      <a href="mailto:mangrulkarp@northeastern.edu" class="serif text-lg px-8 py-3 rounded-full text-white" style="background:linear-gradient(120deg,#c0407e,#7c3aed);">Say hello</a>
-      <a href="https://www.linkedin.com/in/priyanka-mangrulkar/" target="_blank" class="serif text-lg px-8 py-3 rounded-full" style="color:var(--accent); border:1px solid rgba(192,64,126,0.4);">LinkedIn</a>
+  <!-- hero statement -->
+  <section id="top" class="topline py-16 sm:py-24">
+    <p class="ar uppercase tracking-[0.3em] text-xs accent mb-8 reveal">Data Analyst &middot; Business Analyst &middot; BI Developer</p>
+    <h1 class="ar font-black leading-[0.93] tracking-tight reveal" style="font-size:clamp(2.6rem,8.5vw,6.4rem);">
+      I turn messy<br/>operational data<br/>into <span class="accent">decisions</span>.
+    </h1>
+    <div class="grid sm:grid-cols-3 gap-8 mt-16 reveal">
+      <p class="soft leading-relaxed sm:col-span-2 max-w-xl">Boston-based analyst lifting reporting accuracy 40% and cutting manual effort 50% with Power BI, Tableau, SQL, and Excel automation, now with an AI-augmented workflow.</p>
+      <div class="ar text-sm">
+        <p class="lbl muted mb-2">Currently</p>
+        <p class="font-semibold">M.S. Information Systems</p>
+        <p class="muted">Northeastern University</p>
+      </div>
     </div>
   </section>
 
-</main>
+  <!-- about -->
+  <section id="about" class="topline py-14">
+    <div class="grid md:grid-cols-12 gap-6">
+      <div class="md:col-span-3"><p class="lbl muted reveal">01 / About</p></div>
+      <div class="md:col-span-9 space-y-5 reveal">
+        <p class="text-lg sm:text-xl leading-relaxed">I am a business-focused analyst who bridges data and the people who act on it. I own validation, reconciliation, and audit reporting, and I build dashboards that managers and executives actually read.</p>
+        <p class="soft leading-relaxed max-w-2xl">Currently finishing my M.S. in Information Systems at Northeastern. I bring an AI edge too: I am Anthropic certified and use LLMs, Snowflake Cortex AI, and Python automation to speed up analysis. Open to roles in Data Analytics, Business Analysis, and BI Development.</p>
+      </div>
+    </div>
+  </section>
 
-<footer class="text-center text-xs muted pb-10 serif italic">Priyanka Mangrulkar &middot; Data Analytics, Business Analysis & BI &middot; 2026</footer>
+  <!-- experience -->
+  <section id="experience" class="topline py-14">
+    <div class="grid md:grid-cols-12 gap-6">
+      <div class="md:col-span-3"><p class="lbl muted reveal">02 / Experience</p></div>
+      <div class="md:col-span-9" id="exp"></div>
+    </div>
+  </section>
+
+  <!-- selected work -->
+  <section id="work" class="topline py-14">
+    <div class="grid md:grid-cols-12 gap-6">
+      <div class="md:col-span-3"><p class="lbl muted reveal">03 / Selected Work</p><p class="muted text-xs mt-2 reveal">Problem &rarr; Solution &rarr; Impact</p></div>
+      <div class="md:col-span-9" id="work-list"></div>
+    </div>
+  </section>
+
+  <!-- skills -->
+  <section class="topline py-14">
+    <div class="grid md:grid-cols-12 gap-6">
+      <div class="md:col-span-3"><p class="lbl muted reveal">04 / Capabilities</p></div>
+      <div class="md:col-span-9 grid sm:grid-cols-2 gap-8" id="skills"></div>
+    </div>
+  </section>
+
+  <!-- certifications -->
+  <section class="topline py-14">
+    <div class="grid md:grid-cols-12 gap-6">
+      <div class="md:col-span-3"><p class="lbl muted reveal">05 / Certifications</p></div>
+      <div class="md:col-span-9" id="certs"></div>
+    </div>
+  </section>
+
+  <!-- contact -->
+  <section id="contact" class="topline py-20">
+    <p class="ar uppercase tracking-[0.3em] text-xs accent mb-6 reveal">06 / Contact</p>
+    <h2 class="ar font-black leading-tight tracking-tight mb-8 reveal" style="font-size:clamp(2rem,6vw,4rem);">Let's work together.</h2>
+    <div class="flex flex-wrap gap-8 ar text-lg reveal">
+      <a href="mailto:mangrulkarp@northeastern.edu" class="navlink border-b-2" style="border-color:var(--accent);">Email</a>
+      <a href="https://www.linkedin.com/in/priyanka-mangrulkar/" target="_blank" class="navlink muted">LinkedIn</a>
+      <a href="https://github.com/Priyanka5317/" target="_blank" class="navlink muted">GitHub</a>
+    </div>
+  </section>
+
+  <footer class="topline py-8 flex justify-between ar text-xs uppercase tracking-wider muted">
+    <span>Boston, MA</span><span>Priyanka Mangrulkar &middot; 2026</span>
+  </footer>
+</div>
 
 <script>
-// ===== DATA =====
-const metrics = [
-  { n:'40%', l:'higher reporting accuracy' },
-  { n:'50%', l:'less manual effort' },
-  { n:'1,000+', l:'daily records owned' },
-  { n:'AI', l:'augmented, Anthropic certified' },
-];
-const timeline = [
-  { date:'May 2026', title:'M.S. Information Systems', org:'Northeastern University · Boston, MA', desc:'Data Operations and Healthcare Analytics focus: Database Design, Data Management, Data Science with Python.' },
-  { date:'May 2025 - Dec 2025', title:'Data Science Co-op', org:'WhoozCooking · Boston, MA', desc:'Built Power BI and Tableau dashboards on user retention, onboarding, and platform KPIs for Product, Marketing, and Finance partners. Ran churn analysis and A/B testing to guide decisions.' },
-  { date:'Nov 2024 - May 2025', title:'Data Analyst Intern', org:'IST Management Services · Boston, MA', desc:'Owned data-quality validation, reconciliation, integrity rules, and audit reporting on Salesforce and operational datasets (1,000+ daily service requests). Automated Excel (Power Query, VBA, Macros) and SQL reporting, lifting accuracy 40% and cutting manual effort 50%, and built Power BI and Tableau dashboards on resolution time, throughput, and productivity for executive review.' },
-  { date:'Apr 2021 - Apr 2022', title:'Research Analyst', org:'Team Maverick · Pune, India', desc:'Built Tableau dashboards and predictive models, authoring stakeholder reports that translated analysis into engineering decisions and improved accuracy 20%.' },
-  { date:'Aug 2019 - Aug 2023', title:'B.E. Computer Electronics & Telecommunication', org:'Savitribai Phule Pune University · India', desc:'India patent (2023) for a chronic-disease diagnostic system.' },
+const experience = [
+  { date:'2024 - 2026', title:'M.S. Information Systems', org:'Northeastern University, Boston', desc:'Data Operations and Healthcare Analytics focus: Database Design, Data Management, Data Science with Python.' },
+  { date:'2025', title:'Data Science Co-op', org:'WhoozCooking, Boston', desc:'Power BI and Tableau dashboards on retention, onboarding, and platform KPIs for Product, Marketing, and Finance. Churn analysis and A/B testing to guide decisions.' },
+  { date:'2024 - 2025', title:'Data Analyst Intern', org:'IST Management Services, Boston', desc:'Validation, reconciliation, integrity rules, and audit reporting on 1,000+ daily service requests. Automated Excel and SQL reporting (accuracy +40%, manual effort -50%) and built executive dashboards.' },
+  { date:'2021 - 2022', title:'Research Analyst', org:'Team Maverick, Pune', desc:'Tableau dashboards and predictive models; stakeholder reports that improved system accuracy 20%.' },
+  { date:'2019 - 2023', title:'B.E. Computer Electronics & Telecommunication', org:'Savitribai Phule Pune University', desc:'India patent (2023) for a chronic-disease diagnostic system.' },
 ];
 const projects = [
-  { title:'E-Commerce Reporting Warehouse', tags:['Power BI','MySQL','DAX','ETL'], problem:'Slow queries and no real-time reporting on sales and inventory.', solution:'Designed a 15-table normalized MySQL warehouse with indexing, partitioning, triggers, and stored procedures, then built a Power BI semantic layer over Python and SQL ETL.', impact:'Cut query latency 50% on 1M+ row workloads and powered real-time revenue and inventory dashboards.', github:'https://github.com/Priyanka5317/' },
-  { title:'Employee Retention Analysis', tags:['SQL','HR Analytics','Dashboards'], problem:'HR lacked early-warning signals for attrition across tenure and departments.', solution:'Wrote nested SQL queries and CTEs to surface churn patterns, built stored procedures for monitoring, and designed dashboards for HR stakeholders.', impact:'Improved early-warning attrition signals 20%, enabling targeted retention action.', github:'https://github.com/Priyanka5317/Employee-Analysis' },
-  { title:'Sleep Aid Sentiment Dashboards', tags:['Power BI','NLP','Pandas'], problem:'Marketers had no visibility into what customers valued in reviews.', solution:'Analyzed 10,000+ Walmart reviews with pandas, n-grams, and TextBlob sentiment scoring, then visualized trends in Power BI.', impact:'Revealed a 15% higher preference for 10mg doses and lifted insight relevance 40% for marketing strategy.', github:'https://github.com/Priyanka5317/' },
-  { title:'WhoozCooking KPI Reporting', tags:['Power BI','Tableau','SQL'], problem:'Product, Marketing, and Finance needed shared visibility into retention and onboarding.', solution:'Delivered Power BI and Tableau dashboards on retention, onboarding, and platform KPIs over a Redshift warehouse.', impact:'Enabled data-driven decisions across teams and faster self-serve reporting.', github:'https://github.com/Priyanka5317/WhoozCookingAPI' },
-  { title:'PodcastIQ Engagement Analytics', tags:['Snowflake','dbt','Analytics'], problem:'Podcast teams could not see which segments drove engagement.', solution:'Built dbt models across 12,000+ tagged segments on Snowflake with semantic search for self-serve exploration.', impact:'Surfaced segment-level engagement insight to inform content strategy.', github:'https://github.com/Priyanka5317/PodcastIQ' },
-  { title:'F1 Pit-Strategy Simulator', tags:['R Shiny','Interactive','Modeling'], problem:'Race strategists needed to weigh tire grip against durability in real time.', solution:'Built an interactive R Shiny app merging lap and weather data with survival and mixed-effects models.', impact:'Improved simulated pit-strategy success 25% with interactive what-if analysis.', github:'https://github.com/Priyanka5317/Statistical-Analysis-of-Tire-Performance-and-Pit-Strategy-in-Formula-1-Racing' },
+  { title:'E-Commerce Reporting Warehouse', tags:'Power BI / MySQL / ETL', problem:'Slow queries and no real-time reporting on sales and inventory.', solution:'A 15-table normalized MySQL warehouse with indexing, partitioning, and stored procedures, plus a Power BI semantic layer over Python and SQL ETL.', impact:'Cut query latency 50% on 1M+ row workloads and powered real-time dashboards.', url:'https://github.com/Priyanka5317/' },
+  { title:'Employee Retention Analysis', tags:'SQL / HR Analytics', problem:'HR lacked early-warning signals for attrition across tenure and departments.', solution:'Nested SQL and CTEs to surface churn patterns, stored procedures for monitoring, and dashboards for HR stakeholders.', impact:'Improved early-warning attrition signals 20%, enabling targeted action.', url:'https://github.com/Priyanka5317/Employee-Analysis' },
+  { title:'Sleep Aid Sentiment Dashboards', tags:'Power BI / NLP / Pandas', problem:'Marketers had no visibility into what customers valued in reviews.', solution:'Analyzed 10,000+ Walmart reviews with pandas, n-grams, and TextBlob sentiment scoring, visualized in Power BI.', impact:'Revealed a 15% higher preference for 10mg doses and lifted insight relevance 40%.', url:'https://github.com/Priyanka5317/' },
+  { title:'WhoozCooking KPI Reporting', tags:'Power BI / Tableau / SQL', problem:'Product, Marketing, and Finance needed shared visibility into retention and onboarding.', solution:'Power BI and Tableau dashboards on retention, onboarding, and platform KPIs over a Redshift warehouse.', impact:'Enabled data-driven decisions across teams and faster self-serve reporting.', url:'https://github.com/Priyanka5317/WhoozCookingAPI' },
+  { title:'PodcastIQ Engagement Analytics', tags:'Snowflake / dbt', problem:'Podcast teams could not see which segments drove engagement.', solution:'dbt models across 12,000+ tagged segments on Snowflake with semantic search for self-serve exploration.', impact:'Surfaced segment-level engagement insight to inform content strategy.', url:'https://github.com/Priyanka5317/PodcastIQ' },
+  { title:'F1 Pit-Strategy Simulator', tags:'R Shiny / Modeling', problem:'Strategists needed to weigh tire grip against durability in real time.', solution:'An interactive R Shiny app merging lap and weather data with survival and mixed-effects models.', impact:'Improved simulated pit-strategy success 25% with interactive what-if analysis.', url:'https://github.com/Priyanka5317/Statistical-Analysis-of-Tire-Performance-and-Pit-Strategy-in-Formula-1-Racing' },
 ];
 const skills = {
-  'BI & Visualization': ['Power BI (DAX)','Tableau','Looker','TIBCO Spotfire','Streamlit','Seaborn','ggplot2','Matplotlib'],
-  'AI & Automation': ['Claude (Anthropic Certified)','LLM Prompt Engineering','Snowflake Cortex AI','LangGraph Agents','Python Automation','Scikit-learn'],
-  'Excel & Reporting': ['Advanced Excel','Power Query','PivotTables','VBA','Macros','XLOOKUP / INDEX-MATCH','Smartsheet','Google Sheets'],
-  'SQL & Data Operations': ['SQL','CTEs','Window Functions','Stored Procedures','Validation','Reconciliation','Audit Reporting','A/B Testing'],
-  'Databases': ['Snowflake','Redshift','Oracle','MySQL','SQL Server'],
+  'BI & Visualization':'Power BI (DAX), Tableau, Looker, TIBCO Spotfire, R Shiny, Streamlit',
+  'Excel & Reporting':'Advanced Excel, Power Query, PivotTables, VBA, Macros, XLOOKUP, Smartsheet',
+  'SQL & Data Ops':'CTEs, window functions, stored procedures, validation, reconciliation, audit reporting',
+  'Databases & Cloud':'Snowflake, Redshift, Oracle, MySQL, SQL Server, AWS Glue, Airflow',
 };
 const certs = [
-  { title:'Microsoft Power BI Data Analyst', desc:'Data Visualization · DAX · Power Query', org:'LinkedIn Learning' },
-  { title:'Excel for FP&A', desc:'Financial Planning & Analysis · Advanced Excel', org:'LinkedIn Learning · Jan 2026' },
-  { title:'Effective Data Scientists', desc:'Communication · Stakeholder Management · Storytelling', org:'LinkedIn Learning · May 2025' },
-  { title:'Anthropic Certified', desc:'Claude AI · Prompt Engineering & AI Applications', org:'Anthropic' },
+  ['Anthropic Certified','Claude AI, Prompt Engineering & AI Applications'],
+  ['Microsoft Power BI Data Analyst','Data Visualization, DAX, Power Query'],
+  ['Excel for FP&A','Financial Planning & Analysis (Jan 2026)'],
+  ['Effective Data Scientists','Communication & Stakeholder Management (May 2025)'],
 ];
 
-// ===== RENDER =====
-document.getElementById('metrics').innerHTML = metrics.map(m=>`
-  <div class="tile reveal p-6">
-    <div class="num-acc text-4xl sm:text-5xl font-bold leading-none">${m.n}</div>
-    <p class="muted text-sm mt-3 leading-snug">${m.l}</p>
-  </div>`).join('');
-
-document.getElementById('experience-list').innerHTML = timeline.map(e=>`
-  <div class="reveal grid sm:grid-cols-[150px_1fr] gap-1 sm:gap-7 py-6" style="border-top:1px solid var(--line);">
-    <div class="text-sm muted pt-1">${e.date}</div>
+document.getElementById('exp').innerHTML = experience.map((e,i)=>`
+  <div class="grid sm:grid-cols-[110px_1fr] gap-1 sm:gap-6 py-5 reveal ${i?'topline':''}">
+    <div class="ar text-sm muted pt-1">${e.date}</div>
     <div>
-      <h3 class="serif text-xl">${e.title}</h3>
-      <p class="accent text-sm mb-2">${e.org}</p>
-      <p class="soft leading-relaxed text-[0.95rem] max-w-2xl">${e.desc}</p>
+      <h3 class="ar text-xl font-bold">${e.title}</h3>
+      <p class="accent text-sm mb-1">${e.org}</p>
+      <p class="soft text-sm leading-relaxed max-w-2xl">${e.desc}</p>
     </div>
   </div>`).join('');
 
-document.getElementById('work-list').innerHTML = projects.map(p=>`
-  <a href="${p.github}" target="_blank" class="reveal group block py-7" style="border-top:1px solid var(--line);">
+document.getElementById('work-list').innerHTML = projects.map((p,i)=>`
+  <a href="${p.url}" target="_blank" class="idx block py-7 reveal ${i?'topline':''}">
     <div class="flex items-baseline justify-between gap-4">
-      <h3 class="serif text-2xl group-hover:text-[color:var(--accent)] transition">${p.title}</h3>
-      <span class="muted group-hover:text-[color:var(--accent)] transition text-xl">&#8599;</span>
+      <h3 class="ar text-2xl sm:text-3xl font-bold t">${p.title}</h3>
+      <span class="muted ar text-xs whitespace-nowrap">${p.tags}</span>
     </div>
-    <p class="label mt-1 mb-4">${p.tags.join(' &middot; ')}</p>
-    <div class="grid sm:grid-cols-3 gap-5">
-      <div><p class="label mb-1" style="color:#7c3aed;">The Problem</p><p class="soft text-[0.92rem] leading-relaxed">${p.problem}</p></div>
-      <div><p class="label mb-1" style="color:#c0407e;">The Solution</p><p class="soft text-[0.92rem] leading-relaxed">${p.solution}</p></div>
-      <div><p class="label mb-1" style="color:#16a34a;">The Impact</p><p class="soft text-[0.92rem] leading-relaxed">${p.impact}</p></div>
+    <div class="grid sm:grid-cols-3 gap-5 mt-4 max-w-3xl">
+      <div><span class="pi">The Problem</span><p class="soft text-sm leading-relaxed">${p.problem}</p></div>
+      <div><span class="pi">The Solution</span><p class="soft text-sm leading-relaxed">${p.solution}</p></div>
+      <div><span class="pi">The Impact</span><p class="soft text-sm leading-relaxed">${p.impact}</p></div>
     </div>
   </a>`).join('');
 
-document.getElementById('skills-grid').innerHTML = Object.entries(skills).map(([k,arr])=>`
-  <div class="tile reveal p-6">
-    <p class="label mb-3">${k}</p>
-    <div class="flex flex-wrap gap-2">${arr.map(s=>`<span class="chip px-2.5 py-1 rounded-full text-xs">${s}</span>`).join('')}</div>
+document.getElementById('skills').innerHTML = Object.entries(skills).map(([k,v])=>`
+  <div class="reveal">
+    <p class="ar font-bold mb-1">${k}</p>
+    <p class="soft text-sm leading-relaxed">${v}</p>
   </div>`).join('');
 
-document.getElementById('certs-grid').innerHTML = certs.map(c=>`
-  <div class="tile reveal p-6">
-    <p class="label accent mb-2" style="color:var(--accent);">Certified</p>
-    <h3 class="serif text-lg">${c.title}</h3>
-    <p class="muted text-sm mt-1">${c.desc}</p>
-    <p class="accent2 text-xs mt-2">${c.org}</p>
+document.getElementById('certs').innerHTML = certs.map((c,i)=>`
+  <div class="flex items-baseline justify-between py-4 reveal ${i?'topline':''}">
+    <h3 class="ar font-semibold">${c[0]}</h3>
+    <p class="muted text-sm text-right max-w-xs">${c[1]}</p>
   </div>`).join('');
 
-// ===== REVEAL =====
 function checkReveals(){
   const vh = window.innerHeight || document.documentElement.clientHeight;
-  document.querySelectorAll('.reveal:not(.show)').forEach((el,i)=>{
+  document.querySelectorAll('.reveal:not(.show)').forEach(el=>{
     const r = el.getBoundingClientRect();
-    if (r.top < vh*0.92 && r.bottom > 0) el.classList.add('show');
+    if (r.top < vh*0.94 && r.bottom > 0) el.classList.add('show');
   });
 }
 window.addEventListener('scroll', checkReveals, { passive:true });
 window.addEventListener('resize', checkReveals);
 document.addEventListener('visibilitychange', checkReveals);
-checkReveals();
-setTimeout(checkReveals, 100);
+checkReveals(); setTimeout(checkReveals, 100);
 </script>
 </body>
 </html>
