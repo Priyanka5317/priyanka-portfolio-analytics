@@ -57,6 +57,11 @@
   .reveal{ transform:translateY(18px) scale(.985) rotate(-.4deg); }
   .reveal.show{ transform:none; }
   @media (prefers-reduced-motion: reduce){ .reveal{ transition:opacity .3s; transform:none; } .blob,.spin-badge svg,.mq{ animation:none; } }
+  .skill-sticker{ display:inline-block; padding:.32rem .72rem; border-radius:999px; font-family:'Archivo'; font-weight:600; font-size:.74rem; background:#fff; color:var(--ink); border:1.5px solid var(--ink); box-shadow:2px 2px 0 var(--ink); transition:transform .18s, box-shadow .18s, background .18s, color .18s, border-color .18s; cursor:default; }
+  .skill-sticker:nth-child(3n){ transform:rotate(-3deg); background:#fde7f1; border-color:var(--accent); box-shadow:2px 2px 0 var(--accent); }
+  .skill-sticker:nth-child(3n+1){ transform:rotate(2deg); }
+  .skill-sticker:nth-child(4n){ background:#efe7fb; }
+  .skill-sticker:hover{ transform:rotate(0) translateY(-2px) scale(1.05); background:var(--accent); color:#fff; border-color:var(--accent); box-shadow:4px 4px 0 var(--ink); }
   #prog{ position:fixed; top:0; left:0; height:3px; width:0; background:var(--accent); z-index:60; transition:width .08s linear; }
   #cursor{ position:fixed; top:0; left:0; width:24px; height:24px; border:1.5px solid var(--accent); border-radius:50%; transform:translate(-50%,-50%); pointer-events:none; z-index:60; opacity:0; transition:opacity .3s, width .2s, height .2s, background .2s; mix-blend-mode:multiply; }
   #cursor.big{ width:56px; height:56px; background:var(--accent); }
@@ -100,16 +105,11 @@
       <p class="soft leading-relaxed sm:col-span-2 max-w-xl">Boston-based analyst lifting reporting accuracy 40% and cutting manual effort 50% with Power BI, Tableau, SQL, and Excel automation, now with an AI-augmented workflow.</p>
       <div class="ar text-sm">
         <p class="lbl muted mb-2">Currently</p>
-        <p class="font-semibold">M.S. Information Systems</p>
-        <p class="muted">Northeastern University</p>
+        <p class="font-semibold">Looking for opportunities</p>
+        <p class="muted">Data Analytics, BA &amp; BI</p>
       </div>
     </div>
   </section>
-
-  <!-- marquee -->
-  <div class="marquee topline py-4 reveal">
-    <div class="mq" id="mq"></div>
-  </div>
 
   <!-- stats -->
   <section class="topline py-12">
@@ -125,7 +125,7 @@
       </div>
       <div class="md:col-span-9 space-y-5 reveal">
         <p class="text-lg sm:text-xl leading-relaxed">I am a business-focused analyst who bridges data and the people who act on it. I own validation, reconciliation, and audit reporting, and I build dashboards that managers and executives actually read.</p>
-        <p class="soft leading-relaxed max-w-2xl">Currently finishing my M.S. in Information Systems at Northeastern. I bring an AI edge too: I am Anthropic certified and use LLMs, Snowflake Cortex AI, and Python automation to speed up analysis. Open to roles in Data Analytics, Business Analysis, and BI Development.</p>
+        <p class="soft leading-relaxed max-w-2xl">I hold an M.S. in Information Systems and am actively looking for full-time opportunities. I bring an AI edge too: I am Anthropic certified and use LLMs, Snowflake Cortex AI, and Python automation to speed up analysis. Open to roles in Data Analytics, Business Analysis, and BI Development.</p>
       </div>
     </div>
   </section>
@@ -207,10 +207,10 @@ const projects = [
   { title:'F1 Pit-Strategy Simulator', tags:'R Shiny / Modeling', problem:'Strategists needed to weigh tire grip against durability in real time.', solution:'An interactive R Shiny app merging lap and weather data with survival and mixed-effects models.', impact:'Improved simulated pit-strategy success 25% with interactive what-if analysis.', url:'https://github.com/Priyanka5317/Statistical-Analysis-of-Tire-Performance-and-Pit-Strategy-in-Formula-1-Racing' },
 ];
 const skills = {
-  'BI & Visualization':'Power BI (DAX), Tableau, Looker, TIBCO Spotfire, R Shiny, Streamlit',
-  'Excel & Reporting':'Advanced Excel, Power Query, PivotTables, VBA, Macros, XLOOKUP, Smartsheet',
-  'SQL & Data Ops':'CTEs, window functions, stored procedures, validation, reconciliation, audit reporting',
-  'Databases & Cloud':'Snowflake, Redshift, Oracle, MySQL, SQL Server, AWS Glue, Airflow',
+  'BI & Visualization':['Power BI','DAX','Tableau','Looker','TIBCO Spotfire','R Shiny','Streamlit'],
+  'Excel & Reporting':['Advanced Excel','Power Query','PivotTables','VBA','Macros','XLOOKUP','Smartsheet'],
+  'SQL & Data Ops':['CTEs','Window Functions','Stored Procedures','Validation','Reconciliation','Audit Reporting'],
+  'Databases & Cloud':['Snowflake','Redshift','Oracle','MySQL','SQL Server','AWS Glue','Airflow'],
 };
 const certs = [
   ['Anthropic Certified','Claude AI, Prompt Engineering & AI Applications'],
@@ -243,10 +243,10 @@ document.getElementById('work-list').innerHTML = projects.map((p,i)=>`
     </div>
   </a>`).join('');
 
-document.getElementById('skills').innerHTML = Object.entries(skills).map(([k,v])=>`
+document.getElementById('skills').innerHTML = Object.entries(skills).map(([k,arr])=>`
   <div class="reveal">
-    <p class="ar font-bold mb-1">${k}</p>
-    <p class="soft text-sm leading-relaxed">${v}</p>
+    <p class="ar font-bold mb-3">${k}</p>
+    <div class="flex flex-wrap gap-2.5">${arr.map(s=>`<span class="skill-sticker">${s}</span>`).join('')}</div>
   </div>`).join('');
 
 document.getElementById('certs').innerHTML = certs.map((c,i)=>`
@@ -287,9 +287,6 @@ window.addEventListener('mousemove', e=>{ cur.style.opacity='1'; cur.style.left=
 document.addEventListener('mouseover', e=>{ if(e.target.closest('a, .idx')) cur.classList.add('big'); });
 document.addEventListener('mouseout', e=>{ if(e.target.closest('a, .idx')) cur.classList.remove('big'); });
 
-const mqWords = ['Power BI','Tableau','SQL','Power Query','Dashboards','KPIs','Stakeholder Analysis','Excel Automation'];
-const mqSet = mqWords.map(w=>`<b>${w}</b><span class="sp">&#10022;</span>`).join('');
-document.getElementById('mq').innerHTML = mqSet + mqSet;
 
 function checkReveals(){
   const vh = window.innerHeight || document.documentElement.clientHeight;
